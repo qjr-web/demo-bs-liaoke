@@ -1,0 +1,241 @@
+/* 
+通用样式
+*/
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+}
+ul{
+  list-style: none;
+}
+@font-face {
+  font-family: lk;
+  src: url('../fonts/lk.eot') format('embedded-opentype'),
+  url('../fonts/lk.svg') format('svg'),
+  url('../fonts/lk.ttf') format('truetype'),
+  url('../fonts/lk.woff') format('woff');
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+  font-family: lk;
+  font-style: normal;
+}
+#lk_about,#lk_hot,#lk_link{
+  padding: 20px 0;
+}
+#lk_about .title img,
+#lk_hot .title img,
+#lk_link .title img{
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+/* 头部 */
+#lk_header{
+
+}
+.top-bar{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  box-sizing: content-box;
+  border-bottom: 1px solid #ccc;
+}
+/* 相邻兄弟结合符只能选择两个相邻兄弟中的第二个元素开始 */
+.top-bar .container .row > div+div{
+  border-left: 1px solid #ccc;
+}
+/* @media screen and (max-width: 992px){
+  .top-bar .container .row > div+div{
+    border-left: 0px solid #ccc;
+  }
+} */
+.top-bar .container .row .top-bar-1 a{
+  position: relative;
+}
+
+.top-bar .container .row .top-bar-1 a img{
+  display: none;
+  position: absolute;
+  z-index:9999;
+}
+.top-bar .container .row .top-bar-1 a:hover img{
+  display: block;
+  
+}
+.top-bar .container .row .top-bar-4:nth-child(2){
+  margin-left: 20px;
+}
+
+.icon-phone::before{
+  content: '\e958';
+  font-size: 13px;
+}
+.icon-tel::before{
+  content: '\e942';
+  font-size: 13px;
+}
+
+#lk_header .navbar-lk{
+  background-color: #fff;
+  margin-bottom: 0px;
+}
+#lk_header .navbar-lk .navbar-brand{
+  height:70px;
+  padding: 10px 15px;
+}
+#lk_header .navbar-lk li{
+  height: 70px;
+}
+#lk_header .navbar-lk li a{
+  height: 70px;
+  line-height: 40px;
+  text-align: center;
+}
+#lk_header .navbar-lk li.active a,
+#lk_header .navbar-lk li a:hover{
+  background-color: transparent;
+  border-bottom: 2px solid #337ab7;
+}
+#lk_header .navbar-lk .navbar-toggle{
+  margin-top: 18px;
+}
+
+/* 轮播图 */
+#lk_carousel{}
+#lk_carousel .item{
+  background: no-repeat center center;
+  background-size: cover;
+}
+@media screen and (min-width:800px){
+  #lk_carousel .item{
+    height: 410px;
+  }
+}
+/* 关于我们 */
+#lk_about .containe .row p{
+  line-height: 29px;
+  font-size: 15px;
+}
+
+/* 产品特色 */
+#lk_product{
+  background-color: #f0f0f0;
+  padding: 30px 0;
+}
+#lk_product .nav{
+  font-size: 18px;
+}
+#lk_product .nav li.active a{
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #337ab7;
+  color: #000;
+}
+#lk_product .nav li a:active{
+  color: #000;
+}
+#lk_product .tab-content{
+  padding-top: 20px;
+}
+#lk_product .tab-content .pd-left{
+  padding: 40px 0;
+}
+#lk_product #product1 .media-body{
+  padding-top: 100px;
+}
+#lk_product #product1 .breadcrumb{
+  background-color: transparent;
+  margin-top: 20px;
+}
+#lk_product #product1 #pd-one-4{
+  margin: 15px 0px;
+} 
+
+#lk_product #product2 .pd-left{
+  padding: 100px 0px;
+}
+#lk_product #product2 .pd-left h1{
+  margin-bottom: 15px;
+}
+#lk_product #product3 .pd-left h1{
+  font-weight: bold;
+}
+#lk_product #product3 .pd-left h4{
+  margin: 15px 0px;
+}
+#lk_product #product3 .pd-left .badge{
+  padding:15px 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* 热门课程 */
+#lk_hot .lesson{
+  padding: 15px 10px;
+}
+#lk_hot .lesson .media .media-left{
+  width: 20%;
+}
+#lk_hot .lesson .media .media-body{
+  width: 60%;
+  vertical-align: middle;
+}
+#lk_hot .lesson .media .media-right{
+  width: 20%;
+  vertical-align: middle;
+}
+
+/* 友情链接 */
+#lk_link .logos{
+  text-align: center;
+}
+#lk_link .logos li{
+  display: inline-block;
+  margin: 10px 20px;
+}
+/* 底部footer */
+
+#lk_footer{
+  width: 100%;
+  height: 200px;
+  background: url('../imges/ft_bg.png');
+  color: #fff;
+  font-size: 16px;
+}
+#lk_footer .container{
+  padding-top: 10px;
+}
+#lk_footer .footer-left,
+#lk_footer .footer-middle{
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#lk_footer .footer-left li{
+  line-height: 40px;
+}
+#lk_footer .footer-left li a{
+  color: #fff;
+
+}
+#lk_footer .footer-right a{
+  text-decoration: none;
+}
+#lk_footer .footer-right img{
+  width: 50px;
+  padding: 5px;  
+}
+#lk_footer .footer-right{
+  padding: 10px 50px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
